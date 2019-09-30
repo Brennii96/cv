@@ -1,3 +1,33 @@
+//Typography
+$base-font-size: 16px;
+$base-font-family: 'Roboto', sans-serif;
+$heading-font-family: 'Lato', sans-serif;
+
+//Convert px to em
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  text-align: center;
+}
+
+* {
+  transition: all .65s ease;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
 .fa-linkedin {
   color: #0077b5;
 }
@@ -11,10 +41,6 @@
 }
 .key-skills-container {
   text-align: center;
-}
-.container {
-  height: 100%;
-  font-family: "Lato", sans-serif;
 }
 .name {
   text-align: center;
